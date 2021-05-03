@@ -2,11 +2,15 @@ import React from 'react'
 import css from '../HelpCard/HelpCard.module.css'
 
 
-export const Helpcard = ({ title, bg }) => {
+export const Helpcard = ({ data }) => {
     return (
-        <div style={{background: bg}} className={css.helpCard}>
-            <hr />
-            <h3>{title}</h3>
+        <div className={css.help}>
+            <div style={{ background: data.bg, backgroundImage: `url(${data.image})` }} className={css.helpCard}>
+                <hr />
+                <h3>{data.title}</h3>
+
+            </div>
         </div>
+
     )
 }

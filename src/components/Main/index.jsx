@@ -2,6 +2,7 @@ import React from 'react'
 import css from './Main.module.css'
 import mainPic from '../../images/bg.png'
 import { Helpcard } from '../HelpCard'
+import pic from '../../images/klub.png'
 
 export const MainPage = () => {
     const data = [
@@ -17,14 +18,15 @@ export const MainPage = () => {
         },
         {
             title: "Pumping Iron",
-            bg: "#62D0DF",
+            image: pic,
             id: 3,
-        
+
+
         },
         {
             title: "Pumping Iron",
             bg: "#0052C1",
-            id : 4
+            id: 4
         }
     ];
     return (
@@ -63,13 +65,19 @@ export const MainPage = () => {
             </div>
             <div>
                 <h5>WE CAN HELP YOU WITH</h5>
-                <div>
+                <div className={css.cards}>
                     {
+                        // data.map((el, id) => {
+                        //     return <Helpcard 
+                        //     bg={el.bg} 
+                        //     title={el.title}
+                        //     image={el.image}
+                        //     key={id} />
+                        // })
                         data.map((el, id) => {
-                            return <Helpcard 
-                            bg={el.bg} 
-                            title={el.title}
-                            key={id} />
+                            return <Helpcard
+                                data={el}
+                                key={id} />
                         })
                     }
                 </div>
