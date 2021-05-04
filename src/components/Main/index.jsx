@@ -78,7 +78,7 @@ export const MainPage = () => {
                             return <Helpcard
                                 data={el}
                                 key={id} />
-                        })
+                        }) 
                     }
                 </div>
 
