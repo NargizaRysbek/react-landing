@@ -34,7 +34,7 @@ export const  App = () => {
   ]
   return (
     <div className="App">
-     {/* <MainPage/> */}
+     <MainPage/>
      {
        data.map((el, id) => {
          return    <ConditionalRender data={el} key={id}/>
